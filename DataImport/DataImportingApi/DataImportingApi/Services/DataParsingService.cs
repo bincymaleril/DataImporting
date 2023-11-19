@@ -8,7 +8,6 @@ namespace DataImportingApi.Services
     {
         public ExpenseData ExtractAndCalculate(string data)
         {
-            // Implement logic to extract and calculate based on provided text
             var expenseData = new ExpenseData();
 
 
