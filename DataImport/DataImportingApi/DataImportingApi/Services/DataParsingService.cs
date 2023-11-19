@@ -81,18 +81,7 @@ namespace DataImportingApi.Services
         }
         public static bool HasMatchingTags(List<string> tags)
         {
-            //string tagName;
-            //foreach (string tag in text.Split())
-            //{ 
-            //string openingTag = $"<{tag}>";
-            //string closingTag = $"</{tag}>";
-
-            //int openingTagCount = text.Split(openingTag).Length - 1;
-            //int closingTagCount = text.Split(closingTag).Length - 1;
-
-            //return openingTagCount == closingTagCount;
-            //}
-            //return false;
+           
 
             int openTagCount = 0;
             int closeTagCount = 0;
@@ -102,10 +91,6 @@ namespace DataImportingApi.Services
                 if (tag.StartsWith('/'))
                 {
                     closeTagCount++;
-                    //if (openTagCount < 0)
-                    //{
-                    //    return true; // Closing tag without corresponding opening tag found
-                    //}
                 }
                 else
                 {
@@ -116,7 +101,6 @@ namespace DataImportingApi.Services
                 return true;
             else
                 return false;
-            //return openTagCount == 0;
         }
 
         public static List<string> ExtractTags(string text)
